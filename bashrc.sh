@@ -1,8 +1,12 @@
+
 ######################
 #                    #
 # personal shortcuts #
 #                    #
 ######################
+
+# set vim bindings
+set -o vi
 
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
