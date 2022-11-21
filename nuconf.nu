@@ -7,7 +7,7 @@
 
 alias setclip = xclip -selection c
 alias getclip = xclip -selection c -o
-alias pwdc = $env.PWD | setclip
+alias pwdc = ($env.PWD | setclip)
 
 def-env mc [new_dir: string] {
     mkdir $new_dir
