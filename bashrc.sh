@@ -9,8 +9,8 @@
 set -o vi
 
 # Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ ! -d ~/.config/.shorts ]; then
+    mkdir ~/.config/.shorts
 fi
 
 # clipboard shortcuts
@@ -21,10 +21,13 @@ alias pwdc="pwd | setclip"
 # sets mc to make a directory and cd into it
 mc() { mkdir $1; cd $1; }
 
-# creates an permanent alias for the current working directory
-aliad() {
-    export aline="alias $1=\"cd "$(pwd)"\""
-    echo "$1 -> $(pwd)"
-    echo "$aline" >> ~/.bash_aliases
-    source ~/.bash_aliases
+short() {
+    if [ "$1" == "add" ]; then
+        if [ ! -f  "~/.config/.shorts/${2}" ]; then
+            echo "[cmd] \`short ${2}\` -> ${PWD}"
+            ln -sf $PWD "~/.config/.shorts/${2}"
+        fi
+    else
+        cd ~/.config/.shorts/${1}
+    fi
 }
