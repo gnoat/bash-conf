@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [[ "$1" == "mac" ]]; then
+if [[ "$(uname)" == *"Darwin"* ]]; then
     cat bashrc.sh >> ~/.zshrc
 else
     cat bashrc.sh >> ~/.bashrc
