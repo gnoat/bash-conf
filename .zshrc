@@ -15,9 +15,9 @@ mc() { mkdir $1; cd $1; }
 
 short() {
     if [[ "$1" == "add" ]]; then
-        if [ ! -f  "~/.config/.shorts/${2}" ]; then
+        if [ ! -f  ~/.config/.shorts/${2} ]; then
             echo "[cmd] \`short ${2}\` -> ${PWD}"
-            ln -sf $PWD "~/.config/.shorts/${2}"
+            ln -sf ./ ~/.config/.shorts/${2}
         fi
     else
         cd ~/.config/.shorts/${1}

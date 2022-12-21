@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 if [[ "$(uname)" == *"Darwin"* ]]; then
-    cat bashrc.sh >> ~/.zshrc
+    cat .zshrc >> ~/.zshrc
 else
-    cat bashrc.sh >> ~/.bashrc
+    cat .bashrc >> ~/.bashrc
 fi
