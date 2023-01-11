@@ -3,12 +3,12 @@
 prompt_setup_sugasheeze(){
   setopt localoptions extendedglob
 
-  ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$FG[087]%}"
+  ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$FG[039]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
   ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}%{$reset_color%}"
   ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-  base_prompt='%B%{$FG[199]%}%n%b%{$reset_color%}%{$FG[251]%} %B@%b %{$reset_color%}%B%{$FG[036]%}%m%b%{$reset_color%}%{$FG[255]%} %B[%b%{$reset_color%}%{$FG[212]%}%0~%{$reset_color%}%{$FG[255]%}%B]%b %B🌵%b %{$reset_color%}'
+  base_prompt='%B%{$FG[048]%}shane %{$FG[255]%}[%b%{$FG[199]%}%n%B%{$FG[255]%}]%b%{$reset_color%}%{$FG[255]%} %B@%b %{$reset_color%}%B%{$FG[114]%}%m%b%{$reset_color%}%{$FG[255]%} %B[%b%{$reset_color%}%{$FG[212]%}%0~%{$reset_color%}%{$FG[255]%}%B]%b %B🌵%b %{$reset_color%}'
   post_prompt='%{$FG[251]%}%B->%b%{$reset_color%} '
 
   base_prompt_nocolor=${base_prompt//\%\{[^\}]##\}}
