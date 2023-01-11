@@ -9,7 +9,7 @@ prompt_setup_sugasheeze(){
   ZSH_THEME_GIT_PROMPT_CLEAN=""
 
   base_prompt='%B%{$FG[199]%}%n%b%{$reset_color%}%{$FG[251]%} %B@%b %{$reset_color%}%B%{$FG[036]%}%m%b%{$reset_color%}%{$FG[255]%} %B[%b%{$reset_color%}%{$FG[212]%}%0~%{$reset_color%}%{$FG[255]%}%B]%b %B🌵%b %{$reset_color%}'
-  post_prompt='%{$FG[251]%} %B->%b%{$reset_color%}  '
+  post_prompt='%{$FG[251]%}%B->%b%{$reset_color%} '
 
   base_prompt_nocolor=${base_prompt//\%\{[^\}]##\}}
   post_prompt_nocolor=${post_prompt//\%\{[^\}]##\}}
